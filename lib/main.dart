@@ -93,7 +93,6 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
       appBar: AppBar(
         title: Text(
           'Tic Tac Toe',
-          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
