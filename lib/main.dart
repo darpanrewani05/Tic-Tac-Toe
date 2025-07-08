@@ -90,8 +90,12 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
     final boardSize = size.width < size.height ? size.width : size.height;
 
     return Scaffold(
-      appBar: AppBar(title: Text('Tic Tac Toe',),
-      centerTitle: true,
+      appBar: AppBar(
+        title: Text(
+          'Tic Tac Toe',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
       ),
       body: Container(
         width: double.infinity,
@@ -112,8 +116,8 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
               padding: EdgeInsets.all(10),
               child: GridView.builder(
                 itemCount: 9,
-                gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3),
                 itemBuilder: (context, index) => GestureDetector(
                   onTap: () => playMove(index),
                   child: Container(
